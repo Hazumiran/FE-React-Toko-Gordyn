@@ -4,59 +4,60 @@ import { Link } from "react-router-dom";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import Tabs from "components/Tabs/Tabs";
 
 export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+      {/* <img
+    className="absolute top-0 left-0 pt-16 sm:w-3/12 -mt-48 sm:mt-0 w-10/12 max-h-850px ml-0"
+    src={require("assets/img/HomeGordyn.png")}
+    alt="..."
+  /> */}
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-                Notus React - A beautiful extension for Tailwind CSS.
+                Bagja Gordyn - A beautiful model for.
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                Notus React is Free and Open Source. It does not change any of
-                the CSS from{" "}
-                <a
-                  href="https://tailwindcss.com/?ref=creativetim"
-                  className="text-blueGray-600"
-                  target="_blank"
-                >
-                  Tailwind CSS
-                </a>
-                . It features multiple HTML elements and it comes with dynamic
-                components for ReactJS, Vue and Angular.
+                Bagja Gordyn solution for your perfect solution for enhancing any room! We offer a wide selection of high-quality curtains, from elegant colors to modern patterns, all designed to beautify your home or office. Our curtains are not only soft and durable but also add a luxurious touch to any window.
               </p>
               <div className="mt-12">
                 <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
-                  target="_blank"
+                  //href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
+                  href="#features"
+                  // target="_blank"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
                   Get started
                 </a>
-                <a
+                {/* <a
                   href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
                   className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                   target="_blank"
                 >
                   Github Star
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
         </div>
-
         <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
-          src={require("assets/img/pattern_react.png")}
+          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px z-0"
+          src={require("assets/img/HomeGordyn.png")}
           alt="..."
         />
+        {/* <img
+          className="absolute top-0 b-auto right-0 pt-0 sm:w-4/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
+          src={require("assets/img/HomeGordyn.png")}
+          alt="..."
+        /> */}
       </section>
 
-      <section className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
+      <section id="features" className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
           style={{ transform: "translateZ(0)" }}
@@ -108,7 +109,7 @@ export default function Index() {
                   </p>
                 </blockquote>
               </div>
-            </div>
+            </div>            
 
             <div className="w-full md:w-6/12 px-4">
               <div className="flex flex-wrap">
@@ -173,6 +174,9 @@ export default function Index() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center items-center w-100 p-0">
+        <Tabs/>
         </div>
 
         <div className="container mx-auto overflow-hidden pb-20">
