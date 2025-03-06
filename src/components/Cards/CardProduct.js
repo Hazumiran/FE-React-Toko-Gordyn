@@ -1,61 +1,47 @@
-const callouts = [
-  {
-    name: "Desk and Office",
-    description: "Work from home accessories",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-01.jpg",
-    imageAlt:
-      "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    href: "#",
-  },
-  {
-    name: "Self-Improvement",
-    description: "Journals and note-taking",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-02.jpg",
-    imageAlt:
-      "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    href: "#",
-  },
-  {
-    name: "Travel",
-    description: "Daily commute essentials",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg",
-    imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    href: "#",
-  },
-];
+export default function CardGrid() {
+    const cards = [
+    {
+        title: "The Coldest Sunset",
+        imgSrc: "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-01.jpg",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+        tags: ["#photography", "#travel", "#winter"],
+    },
+    {
+        title: "Exploring the Mountains",
+        imgSrc: "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-02.jpg",
+        description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        tags: ["#nature", "#adventure", "#hiking"],
+    },
+    {
+        title: "City Lights at Night",
+        imgSrc: "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg",
+        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        tags: ["#cityscape", "#nightlife", "#travel"],
+    },
+    ];
 
-export default function Example() {
-  return (
-    <div className="bg-gray-100">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-          <h2 className="text-2xl font-bold text-gray-900">Collections</h2>
-
-          <div className="mt-6 grid grid-cols-3 gap-x-6">
-            {callouts.map((callout) => (
-              <div key={callout.name} className="group relative">
-                <img
-                  alt={callout.imageAlt}
-                  src={callout.imageSrc}
-                  className="w-full h-96 rounded-lg object-cover group-hover:opacity-75"
-                />
-                <h2 className="text-lg font-semibold text-gray-900">
-                  <a href={callout.href}>
-                    <span className="absolute inset-0" />
-                    {callout.name}
-                  </a>
-                </h2>
-                <p className="mt-4 text-sm text-gray-500">
-                  {callout.description}
-                </p>
-              </div>
-            ))}
-          </div>
+    return (
+    <div className="container mx-auto px-4">
+        {/* Grid untuk memastikan 3 card sejajar */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full min-h-screen">
+        {cards.map((card, index) => (
+            <div key={index} className="w-full rounded overflow-hidden shadow-lg bg-white">
+            <img className="w-full h-56 object-cover" src={card.imgSrc} alt={card.title} />
+            <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">{card.title}</div>
+                <p className="text-gray-700 text-base">{card.description}</p>
+            </div>
+            <div className="px-6 pt-4 pb-2">
+                {card.tags.map((tag, tagIndex) => (
+                <span key={tagIndex} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                    {tag}
+                </span>
+                ))}
+            </div>
+            </div>
+        ))}
         </div>
-      </div>
     </div>
-  );
+    );
 }
+  

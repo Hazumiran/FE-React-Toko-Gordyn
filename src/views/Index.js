@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import Tabs from "components/Tabs/Tabs";
-import Product from "components/Cards/CardProduct";
+// import Tabs from "components/Tabs/Tabs";
+// import Product from "components/Cards/CardProduct";
 
 export default function Index() {
   return (
@@ -28,7 +28,7 @@ export default function Index() {
                 any room! We offer a wide selection of high-quality curtains,
                 from elegant colors to modern patterns, all designed to beautify
                 your home or office. Our curtains are not only soft and durable
-                but also add a luxurious touch to any window.
+                but also add a luxurious touch to any window. 
               </p>
               <div className="mt-12">
                 <a
@@ -106,10 +106,10 @@ export default function Index() {
                       className="text-lightBlue-500 fill-current"
                     ></polygon>
                   </svg>
-                  <h4 className="text-xl font-bold text-white">
+                  <h4 className="text-xl font-bold text-grey-400">
                     Great for your awesome project
                   </h4>
-                  <p className="text-md font-light mt-2 text-white">
+                  <p className="text-md font-light mt-2 text-grey-400">
                     Putting together a page has never been easier than matching
                     together pre-made components. From landing pages
                     presentation to login areas, you can easily customise and
@@ -183,10 +183,97 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Tabs />
-          {/* <Product /> */}
-        </div>
+        
+        <section className="container mx-auto px-4 py-10">
+          <h2 className="text-2xl font-bold text-center mb-6">Pilihan Bahan Kain</h2>
+          
+          {/* Flexbox horizontal dan scroll jika tidak cukup lebar */}
+          <div className="flex flex-nowrap overflow-x-auto gap-4 justify-center">
+            <div className="min-w-[150px] lg:w-1/6 p-4">
+              <div className="relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
+                <img
+                  alt="Katun"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                  className="w-full h-32 object-cover"
+                />
+                <blockquote className="p-4 bg-white text-center">
+                  <h4 className="text-xl font-bold text-gray-600">Katun</h4>
+                  <p className="text-red-500 text-md mt-2 font-bold">Rp132.000</p>
+                </blockquote>
+              </div>
+            </div>
+
+            <div className="min-w-[150px] lg:w-1/6 p-4">
+              <div className="relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
+                <img
+                  alt="Linen"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                  className="w-full h-32 object-cover"
+                />
+                <blockquote className="p-4 bg-white text-center">
+                  <h4 className="text-xl font-bold text-gray-600">Linen</h4>
+                  <p className="text-red-500 text-md mt-2 font-bold">Rp102.000</p>
+                </blockquote>
+              </div>
+            </div>
+
+            <div className="min-w-[150px] lg:w-1/6 p-4">
+              <div className="relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
+                <img
+                  alt="Sutra"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                  className="w-full h-32 object-cover"
+                />
+                <blockquote className="p-4 bg-white text-center">
+                  <h4 className="text-xl font-bold text-gray-600">Sutra</h4>
+                  <p className="text-red-500 text-md mt-2 font-bold">Rp120.000</p>
+                </blockquote>
+              </div>
+            </div>
+
+            <div className="min-w-[150px] lg:w-1/6 p-4">
+              <div className="relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
+                <img
+                  alt="Beludru"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                  className="w-full h-32 object-cover"
+                />
+                <blockquote className="p-4 bg-white text-center">
+                  <h4 className="text-xl font-bold text-gray-600">Beludru</h4>
+                  <p className="text-red-500 text-md mt-2 font-bold">Rp120.000</p>
+                </blockquote>
+              </div>
+            </div>
+
+            <div className="min-w-[150px] lg:w-1/6 p-4">
+              <div className="relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
+                <img
+                  alt="Polyester"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                  className="w-full h-32 object-cover"
+                />
+                <blockquote className="p-4 bg-white text-center">
+                  <h4 className="text-xl font-bold text-gray-600">Polyester</h4>
+                  <p className="text-red-500 text-md mt-2 font-bold">Rp120.000</p>
+                </blockquote>
+              </div>
+            </div>
+
+            <div className="min-w-[150px] lg:w-1/6 p-4">
+              <div className="relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
+                <img
+                  alt="Blackout"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                  className="w-full h-32 object-cover"
+                />
+                <blockquote className="p-4 bg-white text-center">
+                  <h4 className="text-xl font-bold text-gray-600">Blackout</h4>
+                  <p className="text-red-500 text-md mt-2 font-bold">Rp120.000</p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <div className="container mx-auto overflow-hidden pb-20">
           <div className="flex flex-wrap items-center">
